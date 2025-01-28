@@ -23,8 +23,11 @@ app = Flask(__name__)
 
 # CONFIGURATIONS
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
-app.config['SQLALCHEMY_DATABASE_URI'] =os.getenv('DATABASE_URL')
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL')
 #app.config['SQLALCHEMY_DATABASE_URI'] ="sqlite:///database.db"
+import os
+
+app.config['INSTANCE_PATH'] = '/tmp'
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['UPLOAD_FOLDER'] = 'uploads'  # Temporary upload folder
