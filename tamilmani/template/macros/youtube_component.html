@@ -1,0 +1,12 @@
+
+{% for document in documents %}
+<div class="card m-1 p-1" style="width: 18rem;">
+  <!-- <img src="..." class="card-img-top" alt="..."> -->
+  <iframe  class="card-img-top img-fluid rounded" src={{document.url}} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <div class="card-body">
+    <!-- <h5 class="card-title">Card title {{document.title}}</h5> -->
+    <p class="card-text">{{document.title}}</p>
+    <a href="{{document.url}}" class="btn btn-primary" >View</a>
+  </div>
+</div>
+{% endfor %}

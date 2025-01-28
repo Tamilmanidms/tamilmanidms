@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block extra_styles %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+<!-- SEARCH  -->
+{% set search_url_for = "youtube_search" %}
+{% include "macros/search_bar.html" %}
+
+
+<!--  YOUTUBE COMPONENT -->
+<div class="row row-cols-1 row-cols-md-2 align-items-center justify-content-center p-1"> 
+{% include "macros/youtube_component.html" %}
+</div>
+</div>
+<!-- PAGINATION PAGE -->
+<!-- Pass variables via the parent template -->
+<!-- PAGINATION PAGE -->
+{% set page_name = "youtube_page" %}
+{% include "macros/pagination_component.html" %}
+
+{% endblock %}

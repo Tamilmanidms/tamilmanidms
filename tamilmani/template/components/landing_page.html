@@ -1,0 +1,51 @@
+{% block extra_styles %}
+<style type="text/css">
+.landing-page-tamilmani{
+    height: 300px;
+    width:260px; 
+    overflow:hidden;
+   
+}
+@media(min-width: 900px){
+    .landing-page-tamilmani{
+        height: 400px;
+        width:360px; 
+    }
+
+}
+</style>
+{% endblock %}
+
+<div class="container">
+    <div class="
+        landing-page-image
+        rounded
+        row align-items-center 
+        justify-content-center 
+        p-5 border">
+
+        <img src="{{ url_for('static', filename='img/tamimani.png') }}" 
+        alt="Tamilmani KT" 
+        class="img-thumbnail rounded-circle md-rounded col-12 col-md-6 border-white landing-page-tamilmani" 
+        style="" loading="lazy">
+        <div class="
+            col-12
+            col-md-6 
+            d-flex
+            flex-column
+            align-items-center 
+            justify-content-center 
+            text-center
+            text-white
+            ">
+
+            <h1 style="width: 20ch;" class="pt-3 fw-bold">{{page_info.name}}</h1>
+            <h5 class="fw-normal"> {{ page_info.job }} </h5>
+            <small class="lead"> {{ page_info.slogan}}</small>
+            <a href="/about" 
+            class="btn btn-warning text-white  border-warning btn-sm active m-5 p-2 " 
+            role="button" 
+            aria-pressed="true" style="background-color:transparent; border-radius: 15px;"> View Profile</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+{% block extra_styles %}
+<script src="https://unpkg.com/htmx.org@1.6.1"></script>
+{% endblock %}
+
+<div class="container p-2 m-1">
+<form class="search-form form-inline my-2 my-lg-0" 
+        id="search-form" 
+        hx-get="{{ url_for(search_url_for) }}" 
+        hx-target="#search-results" 
+        hx-swap="innerHTML">
+
+    <input type="text" id="search" name="q" class="form-control w-50 mr-sm-2 d-inline" type="search" placeholder="Search" aria-label="Search">
+    <button type="submit" class="btn btn-outline-success my-2 my-sm-0 d-inline">Search</button>
+
+</form>
+
+<!-- Display search results -->
+<div id="search-results"> 
+</div>
+</div>
+

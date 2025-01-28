@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %} Tamilmani KT {% endblock %}
+{% block extra_styles %}
+<style type="text/css">
+.landing-page-image{
+    background: linear-gradient(to right, rgba(0, 98, 185, 0.8), rgba(0, 98, 185, 0.8)), url(static/img/bg.svg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+</style>
+{% endblock %}
+
+{% block content %}
+
+{% include 'components/landing_page.html' %}
+
+{% include 'components/about_me.html' %}
+<div class="container other-section text-dark rounded p-2">
+    {% include 'components/resources.html' %}
+    {% include 'components/youtube.html' %}
+    {% include 'components/contact.html' %}
+</div>
+    {% include 'components/contact_us.html' %}
+{% endblock %}
+
+
+
+
+
+
+

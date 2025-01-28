@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block extra_styles %}
+
+{% endblock %}
+{% block content %}
+
+<div class="container ">
+<!-- SEARCH  -->
+{% set search_url_for = "search_documents" %}
+{% include "macros/search_bar.html" %}
+
+<!-- Display documents -->
+<div class="row row-cols-1 row-cols-md-2 align-items-center justify-content-center p-1"> 
+{% include "macros/document_component.html" %}
+</div>
+
+</div>
+<!-- PAGINATION PAGE -->
+{% set page_name = "download_page" %}
+{% include "macros/pagination_component.html" %}
+{% endblock %}

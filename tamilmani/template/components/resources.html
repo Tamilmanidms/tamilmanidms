@@ -1,0 +1,27 @@
+<div class="container " id="document">
+  <h2 class="text-center mt-5 mb-1 fw-bold">RESOURCES</h2>
+  <h2 class="text-center text-black " style="transform: rotate(90deg);">
+                <span class="text-center text-black bg-info" style="border-radius: 15px; padding: 2px; 
+              transform: rotate(90deg);"></span>
+            </h2>
+  <div class="row">
+    {% if categories %}
+            {% for category in categories %}
+            <div class=" col-12 col-md-5 mb-2 col-lg-6 text-dark ">
+              <div class="card glassy-background text-dark border border border-info">
+                <div class="card-body">
+                  <h5 class="card-title">{{ category.category }}</h5>
+                  <p class="card-text text-secondary" style="width: 40ch;">{{ category.description }}</p>
+                  <div class="text-end">
+                  <a href="{{ url_for('download_page', category_id=category.c_id) }}" 
+                    class="btn btn-outline-info ">Vist Page</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+    {% else %}
+    <p class="text-center text-warning">No resource currently available.</p>
+    {% endif %}
+  </div>
+</div>

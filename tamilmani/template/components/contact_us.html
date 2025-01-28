@@ -1,0 +1,53 @@
+{% block extra_styles %}
+   <style>
+    .contact-us{
+        background: linear-gradient(to right, rgba(0, 98, 185, 0.8), rgba(0, 98, 185, 0.8)), url(static/img/common-bg.svg);
+      }
+
+    form{
+        font-display: Roboto;
+        font-weight: 400;}
+
+      .form-input-style{
+        background: #f0f0f0;
+        font-size: 14px;
+        font-weight: 500px;
+      }
+    </style>
+{% endblock %}
+
+<div class="container contact-us rounded p-4">
+  <h2 class="text-center mt-2 mb-2 text-white font-weight-bold fw-bold">CONTACT US</h2>
+  <h2 class="text-center text-white " style="transform: rotate(90deg);">
+    <span class="text-center text-white bg-white" style="border-radius: 15px; padding: 2px; 
+  transform: rotate(90deg);"></span>
+  </h2>
+  
+  <p class="text-white w-70
+      text-center" > Feel free to Contact me by submitting the form below and I will get back to you as soon as possible.
+  </p>
+  <div class="row justify-content-center p-2">
+      <div  class="col-12 col-md-10 ">
+
+          <form  action="/submit_contact_form" method="POST" class="contact-form bg-white rounded p-4 ">
+              <div class="form-group mt-2 ">
+                <label for="name" class="mt-1">Name</label>
+                <input type="text" class="form-input-style form-control mt-1  p-3 text-secondary" 
+                id="name" name="name" placeholder="Enter name"  required>
+              </div>
+
+              <div class="form-group mt-2">
+                  <label for="email" class="mt-1">Email</label>
+                  <input type="email" class="form-input-style form-control mt-1 text-secondary p-3" name="email" id="email" placeholder="Enter Email"  required>
+              </div>
+
+              <div class="form-group mt-2">
+                <label for="formGroupExampleInput2" class="mt-1">Message</label>
+                <input type="textarea" class="form-input-style form-control text-secondary mt-1 p-3" name="message" id="formGroupExampleInput2" placeholder="Enter Message"   required>
+              </div>
+
+              <button type="submit" class="btn btn-primary mt-2">Submit</button>
+          </form>
+      </div>
+  </div>
+</div>

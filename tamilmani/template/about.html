@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block extra_styles %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/profile.css') }}">
+{% endblock %}
+{% block content %}
+<div class="container">
+    <div>
+          <h1 class="p-2 text-center">About Me </h1>
+    </div>
+    {% for profile in profiles %}
+        <div class="profile-section p-1">
+         <h3>{{ profile.title }}</h3>
+            <!-- Loop through each line in profile.detail -->
+             <ul>
+            {% for line in profile.detail %}
+           
+            <li><p>{{ line }}</p></li>
+            {% endfor %}
+        </ul>
+        </div>
+    {% endfor %}
+
+</div>
+{% endblock %}
