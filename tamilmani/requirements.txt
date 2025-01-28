@@ -19,3 +19,4 @@ flask_wtf
 psycopg2-binary
 flask-caching
 flask-minify
+redis
