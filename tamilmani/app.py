@@ -64,11 +64,11 @@ minify(app=app, html=True, js=True)
 # Configure Flask-Caching with Redis
 app.config['CACHE_TYPE'] = 'RedisCache'
 app.config['CACHE_REDIS_URL'] = kv_url  # Use the secure Redis URL
-app.config['CACHE_DEFAULT_TIMEOUT'] = 300  # Cache timeout in seconds
+app.config['CACHE_DEFAULT_TIMEOUT'] = 30  # Cache timeout in seconds
 cache = Cache(app)
 # Configuration
-app.config['SQLALCHEMY_DATABASE_URI'] ='sqlite:///project.db'
-#app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL')
+# app.config['SQLALCHEMY_DATABASE_URI'] ='sqlite:///project.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
 
