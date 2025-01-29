@@ -27,7 +27,7 @@ background-attachment: fixed;
     }
     
     .about-me-paragraph{
-        width: 80%;
+        width: 100%;
 
         max-height: 800px;
         overflow: visible;
@@ -37,11 +37,11 @@ background-attachment: fixed;
 }
 </style>
 {% endblock %}
-<div class="container about-me-image border rounded p-2">
+<div class="container about-me-image  rounded p-1">
     <h1 class="text-center mt-3">ABOUT ME</h1>
     <div class="row justify-content-center p-2 h-100 ">
         <div class="col-12  text-center">
-            <video class="img-thumbnail rounded align-item-center w-75 h-75" style="" autoplay loop muted playsinline>
+            <video class="img-thumbnail rounded align-item-center w-md-75 " style="" autoplay loop muted playsinline>
     <source src="{{ url_for('static', filename='img/aboutme.webm') }}" type="video/webm">
     Your browser does not support the video tag.
 </video>
@@ -52,7 +52,7 @@ background-attachment: fixed;
             </p>
         </div>
     </div>
-<div>
+<div class="text-center">
     <a href="/about"
 class="btn-primary rounded  text-center">My achievements</a>
 </div>
