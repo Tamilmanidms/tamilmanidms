@@ -11,7 +11,7 @@
               <div class="card glassy-background text-dark border border border-info">
                 <div class="card-body">
                   <h5 class="card-title" style="width: 20ch;overflow:hidden;">{{ category.category }}</h5>
-                  <p class="card-text text-secondary" style="width: 40ch;">{{ category.description }}</p>
+                  <p class="card-text text-secondary" style="width: 15ch;overflow:hidden;">{{ category.description }}</p>
                   <div class="text-end">
                   <a href="{{ url_for('download_page', category_id=category.c_id) }}" 
                     class="btn btn-outline-info ">Vist Page</a>
