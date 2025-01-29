@@ -179,7 +179,6 @@ def get_urls(page=1, per_page=10, search_term=None):
 
 # DOWNLOAD PAGE
 @app.route('/download_page')
-@cache.cached() 
 def download_page():
     category_id = request.args.get('category_id', type=int)
     page = request.args.get('page',1,type=int)
@@ -192,7 +191,6 @@ def download_page():
 # DOWNLOAD PAGE
 
 @app.route('/youtube_page')
-@cache.cached() 
 def youtube_page():
     
     page = request.args.get('page',1,type=int)
